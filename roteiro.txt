@@ -21,7 +21,7 @@ Roteiro - react-countries
    (ok) Criar, em Main, input para filtrar países e um 
       state para tal. Testar implementação.
 
-   () Implementar filtro de países com pelo menos 
+   (ok) Implementar filtro de países com pelo menos 
       3 caracteres. Utilizar estado derivado (derived
       state), também conhecido como "campo calculado"
 
