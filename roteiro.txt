@@ -4,7 +4,7 @@ Roteiro - react-countries
 
 (ok) Executar projeto com "yarn dev"
 
-() App.js
+(ok) App.js
    (ok) Boa prática de isolar a aplicação em páginas
    
    (ok) Criar o componente ReactCountriesPage e utilizá-lo
@@ -12,15 +12,12 @@ Roteiro - react-countries
 	  
 () ReactCountriesPage.js
 
-   () Reaproveitar TextInput, Header e Main dos
+   (ok) Reaproveitar TextInput, Header e Main dos
       projetos anteriores
 
-   () Utilizar countries.json na aplicação através 
+   (ok) Utilizar countries.json na aplicação através 
       de uma "const" exportável
-
-   () Enfatizar que isso não é comum. O mais comum é 
-      utilizar um Back End, que será visto posteriormente
-
+   
    () Criar, em Main, input para filtrar países e um 
       state para tal. Testar implementação.
 
@@ -32,11 +29,11 @@ Roteiro - react-countries
    () Implementar componente Country
    () Mostrar implementação "natural" (prop countries)
 
-   () Mostrar boa prática com o conceito de 
+   ()Boa prática com o conceito de 
       Composition (prop children), que evita um
       problema conhecido como prop drilling
 
-   () Enfatizar a importância da prop key quando
+   ()Importância da prop key quando
       renderizamos componentes em loop com array.map  
 
 () Limpar o app para disponibilização, removendo arquivos "desnecessários",
