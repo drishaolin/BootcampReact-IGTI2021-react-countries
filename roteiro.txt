@@ -18,7 +18,7 @@ Roteiro - react-countries
    (ok) Utilizar countries.json na aplicação através 
       de uma "const" exportável
    
-   () Criar, em Main, input para filtrar países e um 
+   (ok) Criar, em Main, input para filtrar países e um 
       state para tal. Testar implementação.
 
    () Implementar filtro de países com pelo menos 
