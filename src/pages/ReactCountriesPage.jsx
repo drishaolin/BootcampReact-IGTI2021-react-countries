@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Countries from "../components/Countries";
 import Header from "../components/Header";
 import Main from "../components/Main";
 import TextInput from "../components/TextInput";
@@ -12,7 +13,7 @@ export default function ReactCountriesPage() {
     setCountryFilter(newCountryFilter);
   }
 
-  const countryFilterLowerCase = countryFilter.toLocaleLowerCase();
+  const countryFilterLowerCase = countryFilter.trim().toLocaleLowerCase();
 
   const filteredCountries =
     countryFilterLowerCase.length >= 3
@@ -34,6 +35,7 @@ export default function ReactCountriesPage() {
           onInputChange={handleCountryFilterChange}
           autoFocus
         />
+        <Countries>{filteredCountries}</Countries>
       </Main>
     </div>
   );

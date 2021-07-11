@@ -25,8 +25,8 @@ Roteiro - react-countries
       3 caracteres. Utilizar estado derivado (derived
       state), também conhecido como "campo calculado"
 
-   () Implementar componente Countries
-   () Implementar componente Country
+   (ok) Implementar componente Countries
+   (ok) Implementar componente Country
    () Mostrar implementação "natural" (prop countries)
 
    ()Boa prática com o conceito de 
