@@ -11,6 +11,11 @@ export default function Country({ children: country = null, onCountryClick = nul
     }
   }
 
+  function formatNumber(n) {
+    n = new Intl.NumberFormat("pt-br").format(n);
+    return n;
+  }
+
   const demographicDensity = country.population / country.area;
   const { flag, name, capital, region, population, area } = country;
   const isVisitedClassName = isVisited ? "bg-green-100" : " ";
@@ -26,9 +31,9 @@ export default function Country({ children: country = null, onCountryClick = nul
         <li><Item label="Nome:">{name}</Item></li>
         <li><Item label="Capital:">{capital}</Item></li>
         <li><Item label="Região:">{region}</Item></li>
-        <li><Item label="População:">{population}</Item></li>
-        <li><Item label="Área:">{area}</Item></li>
-        <li><Item label="Densidade Demográfica:">{demographicDensity}</Item></li>
+        <li><Item label="População:">{formatNumber(population)}</Item></li>
+        <li><Item label="Área:">{formatNumber(area)}</Item></li>
+        <li><Item label="Densidade Demográfica:">{formatNumber(demographicDensity)}</Item></li>
       </ul>
     </div>
   );
