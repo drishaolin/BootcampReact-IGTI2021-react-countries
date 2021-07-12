@@ -15,7 +15,20 @@ export default function ReactCountriesPage() {
   }
 
   function toggleVisitedCountries(countryId) {
-      console.log(countryId);
+    let newVisitedCountries = [...visitedCountries];
+    const isCountryVisited = newVisitedCountries.indexOf(countryId) !== -1;
+
+    
+    //verifies if the item exists, if not, push it in the array:
+    if (isCountryVisited) {
+      newVisitedCountries = newVisitedCountries.filter((visitedCountryId) => {
+        return visitedCountryId !== countryId;
+      });
+    } else {
+      newVisitedCountries.push(countryId);
+    }
+
+    setVisitedCountries(newVisitedCountries);
   }
 
   const countryFilterLowerCase = countryFilter.trim().toLocaleLowerCase();
@@ -27,7 +40,7 @@ export default function ReactCountriesPage() {
         })
       : allCountries;
 
-  console.log(filteredCountries);
+  console.log(visitedCountries);
 
   return (
     <div>
