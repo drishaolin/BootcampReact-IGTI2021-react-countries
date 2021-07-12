@@ -18,7 +18,6 @@ export default function ReactCountriesPage() {
     let newVisitedCountries = [...visitedCountries];
     const isCountryVisited = newVisitedCountries.indexOf(countryId) !== -1;
 
-    
     //verifies if the item exists, if not, push it in the array:
     if (isCountryVisited) {
       newVisitedCountries = newVisitedCountries.filter((visitedCountryId) => {
@@ -40,8 +39,6 @@ export default function ReactCountriesPage() {
         })
       : allCountries;
 
-  console.log(visitedCountries);
-
   return (
     <div>
       <Header>Projeto React Countries</Header>
@@ -53,7 +50,13 @@ export default function ReactCountriesPage() {
           onInputChange={handleCountryFilterChange}
           autoFocus
         />
-        <Countries onCountryClick={toggleVisitedCountries}>{filteredCountries}</Countries>
+        {/* prettier-ignore */}
+        <Countries 
+        visitedCountries={visitedCountries}
+        onCountryClick={toggleVisitedCountries}
+        >
+          {filteredCountries}
+        </Countries>
       </Main>
     </div>
   );
