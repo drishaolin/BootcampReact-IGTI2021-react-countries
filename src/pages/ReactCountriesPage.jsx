@@ -7,10 +7,15 @@ import TextInput from "../components/TextInput";
 import { allCountries } from "../data/countries";
 
 export default function ReactCountriesPage() {
-  const [countryFilter, setCountryFilter] = useState("Argentina");
+  const [countryFilter, setCountryFilter] = useState("");
+  const [visitedCountries, setVisitedCountries] = useState([]);
 
   function handleCountryFilterChange(newCountryFilter) {
     setCountryFilter(newCountryFilter);
+  }
+
+  function toggleVisitedCountries(countryId) {
+      console.log(countryId);
   }
 
   const countryFilterLowerCase = countryFilter.trim().toLocaleLowerCase();
@@ -35,7 +40,7 @@ export default function ReactCountriesPage() {
           onInputChange={handleCountryFilterChange}
           autoFocus
         />
-        <Countries>{filteredCountries}</Countries>
+        <Countries onCountryClick={toggleVisitedCountries}>{filteredCountries}</Countries>
       </Main>
     </div>
   );
