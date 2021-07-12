@@ -27,7 +27,7 @@ Roteiro - react-countries
 
    (ok) Implementar componente Countries
    (ok) Implementar componente Country
-   () Mostrar implementação "natural" (prop countries)
+   (ok) Mostrar implementação "natural" (prop countries)
 
    ()Boa prática com o conceito de 
       Composition (prop children), que evita um

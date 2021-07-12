@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Item({children: value = "Valor", label = "Nome:"}) {
     return (
-       <span>
+       <span className="text-sm">
            <strong>{label}</strong> {value}
        </span>
     )
